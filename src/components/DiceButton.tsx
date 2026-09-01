@@ -1,4 +1,5 @@
 import React from 'react';
+import diceIcon from '../../images/icon-dice.svg'; 
 
 interface DiceButtonProps {
   onClick: () => void;
@@ -15,7 +16,7 @@ export const DiceButton: React.FC<DiceButtonProps> = ({ onClick, isLoading }) =>
       className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[#52ffa8] hover:shadow-[0_0_30px_#52ffa8] flex items-center justify-center transition-all duration-300 ease-out focus:outline-none focus-visible:ring-4 focus-visible:ring-[#52ffa8]/50 disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
     >
       <img
-        src="/images/icon-dice.svg"
+        src={diceIcon}
         alt=""
         className={`w-6 h-6 transition-transform duration-300 ${isLoading ? 'animate-spin' : ''}`}
       />
